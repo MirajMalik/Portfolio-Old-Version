@@ -1,25 +1,24 @@
 {
   "about": {
-    "name": "Miraj",
+    "name": "Tarek Abdullah Miraj",
     "title": "Aspiring Full-Stack Developer & AI Enthusiast",
-    "description": "I am passionate about full-stack web development, artificial intelligence, machine learning, and computer vision. I enjoy building practical projects using React, Django, and Python while continuously improving my problem-solving and research skills.",
+    "description": "I am passionate about full-stack web development, artificial intelligence and machine learning. I enjoy building practical projects using React, Nodejs and MongoDB while continuously improving my problem-solving and research skills.",
     "skills": [
-      "Python",
       "React",
-      "Django",
-      "Machine Learning",
-      "NLP",
-      "Computer Vision",
+      "Nodejs",
+      "ExpressJs",
       "Tailwind CSS",
-      "JavaScript"
+      "JavaScript",
+      "Python",
+      "Machine Learning"
     ],
     "interests": [
+      "Full Stack Web Development",
       "Artificial Intelligence",
-      "Blockchain",
-      "Bioinformatics",
       "Research",
-      "Chatbot Development",
-      "Web Development"
+      "LLM",
+      "Problem Solving"
+      
     ],
     "goals": [
       "Become a skilled AI Engineer",
@@ -27,8 +26,8 @@
       "Publish research papers in AI/ML",
       "Master full-stack development"
     ],
-    "educationStatus": "Self-Learner",
-    "experienceLevel": "Beginner to Intermediate",
-    "location": "Bangladesh"
+    "educationStatus": "Graduate",
+    "experienceLevel": "Beginner",
+    "location": "Uttara, Dhaka, Bangladesh"
   }
 }

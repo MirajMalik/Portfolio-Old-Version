@@ -2,7 +2,7 @@ import { NavLink } from "react-router";
 
 const Header = () => {
     return (
-        <div className="w-full flex justify-between bg-slate-900 border-b-4 border-red-700 text-yellow-300 py-5 px-10 font-bold gap-5">
+        <div className="w-full flex justify-between bg-black border-b-4 border-red-700 text-yellow-300 py-5 px-10 font-bold gap-5">
             <div>
                 Tarek Abdullah Miraj
             </div>

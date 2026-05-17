@@ -15,7 +15,14 @@ const router = createBrowserRouter([
     path: "/",
     Component: App,
     children: [
-      { index: true, Component: Home },
+      { 
+        index: true, 
+         loader: async () => {                                         // the loaders are called before the route component is rendered.   
+            const res =  await fetch('../about.json');
+            return res.json();         
+        },
+        Component: Home 
+      },
       { 
         path: "about", 
         loader: async () => {                                         // the loaders are called before the route component is rendered.   

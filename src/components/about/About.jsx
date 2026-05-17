@@ -4,8 +4,7 @@ const About = () => {
     const data = useLoaderData();
 
     return (
-        <div className="w-full bg-amber-50 min-h-full">
-            {/* Header*/}
+        <div className="w-full bg-[#f8f6f2] min-h-full">
             <div className="bg-black text-amber-50 py-4 px-8 mb-8">
                 <h1 className="text-4xl font-black tracking-widest">ABOUT MIRAJ</h1>
                 <p className="text-xs mt-2 tracking-[0.3em]">━━━━━━━━━━━━━━━━━</p>
@@ -13,7 +12,6 @@ const About = () => {
 
             <div className="px-8 max-w-full">
                 <div className="grid lg:grid-cols-3 gap-8">
-                    {/* Left Panel */}
                     <div className="lg:col-span-1">
                         <div className="border-4 border-black bg-yellow-300 p-8 shadow-lg transform -rotate-1 mb-8">
                             <div className="bg-black text-yellow-300 p-4 mb-4 border-2 border-black">
@@ -38,14 +36,14 @@ const About = () => {
                                 </div>
                             </div>
                         </div>
-                        {/* left panel card */}
+
                         <div className="border-4 border-red-700 bg-red-700 text-white p-6 transform rotate-2">
                             <p className="text-center font-black text-xl">❖ AVAILABLE ❖</p>
                             <p className="text-center text-xs mt-2">FOR NEW PROJECTS</p>
                         </div>
                     </div>
 
-                    {/* Right panel - main content */}
+                    
                     <div className="lg:col-span-2 space-y-8">
                         {/* Bio */}
                         <div className="border-4 border-black bg-white p-8 shadow-lg ">
@@ -63,7 +61,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        {/* skills */}
+                        
                         <div className="grid grid-cols-2 gap-6">
                             <div className="border-4 border-blue-900 bg-blue-100 p-6 shadow-lg transform -rotate-1">
                                 <h3 className="font-black text-blue-900 mb-4 text-lg">[ FRONTEND ]</h3>
@@ -85,7 +83,7 @@ const About = () => {
                             </div>
                         </div>
 
-                        {/* Experience*/}
+                       {/* experiences */}
                         <div className="border-4 border-black bg-white p-8 shadow-lg">
                             <h2 className="text-3xl font-black mb-8 tracking-wider">[ EXPERIENCE ]</h2>
                             <div className="space-y-8">
