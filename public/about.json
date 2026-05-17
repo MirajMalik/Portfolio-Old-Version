@@ -1,0 +1,34 @@
+{
+  "about": {
+    "name": "Miraj",
+    "title": "Aspiring Full-Stack Developer & AI Enthusiast",
+    "description": "I am passionate about full-stack web development, artificial intelligence, machine learning, and computer vision. I enjoy building practical projects using React, Django, and Python while continuously improving my problem-solving and research skills.",
+    "skills": [
+      "Python",
+      "React",
+      "Django",
+      "Machine Learning",
+      "NLP",
+      "Computer Vision",
+      "Tailwind CSS",
+      "JavaScript"
+    ],
+    "interests": [
+      "Artificial Intelligence",
+      "Blockchain",
+      "Bioinformatics",
+      "Research",
+      "Chatbot Development",
+      "Web Development"
+    ],
+    "goals": [
+      "Become a skilled AI Engineer",
+      "Build impactful AI-powered applications",
+      "Publish research papers in AI/ML",
+      "Master full-stack development"
+    ],
+    "educationStatus": "Self-Learner",
+    "experienceLevel": "Beginner to Intermediate",
+    "location": "Bangladesh"
+  }
+}
