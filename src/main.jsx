@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter } from "react-router";
@@ -7,8 +7,12 @@ import Home from './components/home/Home';
 import About from './components/about/About';
 import App from './App';
 // import AuthLayout from './components/auth/AuthLayout';
-import Login from './components/auth/Login';
+// import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import Projects from './components/projects/Projects';
+
+const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
+                        .then(res => res.json());
 
 const router = createBrowserRouter([
   {
@@ -31,7 +35,12 @@ const router = createBrowserRouter([
         },
         Component: About,
       },
-      { path: "login", Component: Login },
+      { 
+        path: "projects", 
+        element: <Suspense fallback={ <span className='text-white flex justify-center items-center'>Loading....</span> }>
+                    <Projects projectsPromise= {projectsPromise}/>
+                 </Suspense> 
+      },
       { path: "register", Component: Register },
     ],
   },

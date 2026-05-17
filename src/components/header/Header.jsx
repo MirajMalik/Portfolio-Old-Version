@@ -23,11 +23,11 @@ const Header = () => {
                                 About
                 </NavLink>
                 <NavLink 
-                        to="/login" 
+                        to="/projects" 
                         className={({ isActive }) =>
                                       isActive ? "text-red-500" : ""
                                   }>
-                                Login
+                                Projects
                 </NavLink>
                 <NavLink 
                         to="/register" 
