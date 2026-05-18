@@ -10,6 +10,7 @@ import App from './App';
 // import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Projects from './components/projects/Projects';
+import ErrorPage from './components/Error/ErrorPage';
 
 const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
                         .then(res => res.json());
@@ -44,6 +45,9 @@ const router = createBrowserRouter([
       { path: "register", Component: Register },
     ],
   },
+
+  { path: "*", Component: ErrorPage },
+
 ]);
 
 createRoot(document.getElementById('root')).render(
