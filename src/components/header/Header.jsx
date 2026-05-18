@@ -10,7 +10,7 @@ const Header = () => {
                 <NavLink 
                         to="/" 
                         className={({ isActive }) =>
-                                      isActive ? "text-red-500" : ""
+                                      isActive ? "text-[#2f3e46]" : ""
                                     
                                   }>
                                 Home
@@ -18,21 +18,21 @@ const Header = () => {
                 <NavLink 
                         to="/about" 
                         className={({ isActive }) =>
-                                    isActive ? "text-red-500" : ""
+                                    isActive ? "text-[#2f3e46]" : ""
                                   }>
                                 About
                 </NavLink>
                 <NavLink 
                         to="/projects" 
                         className={({ isActive }) =>
-                                      isActive ? "text-red-500" : ""
+                                      isActive ? "text-[#2f3e46]" : ""
                                   }>
                                 Projects
                 </NavLink>
                 <NavLink 
                         to="/register" 
                         className={({ isActive }) =>
-                                      isActive ? "text-red-500" : ""
+                                      isActive ? "text-[#2f3e46]" : ""
                                   }>
                                 Register
                 </NavLink>  

@@ -1,15 +1,26 @@
 import { use } from "react";
+import { useNavigate } from "react-router";
 
 const Projects = ( {projectsPromise} ) => {
+    const navigate = useNavigate();
+    const handlePrev = () => {
+        navigate(-1);
+    }
+    
     const projectsData = use(projectsPromise);
 
      const projects = projectsData.filter(repo => repo.description && repo.description.trim() !== "");
     // console.log(projects);
    return (
-        <div className="w-full bg-[#1a1a1a] min-h-full">
-            <div className="bg-black text-[#E2D288] py-4 px-8 mb-8">
-                <h1 className="text-4xl font-black tracking-widest">FEATURED PROJECTS</h1>
-                <p className="text-xs mt-2 tracking-[0.3em]">━━━━━━━━━━━━━━━━━</p>
+        <div className="w-full bg-[#020403] min-h-full">
+            <div className="bg-black text-[#E2D288] py-4 px-8 mb-8 flex justify-between items-center">
+                <div>
+                    <h1 className="text-4xl font-black tracking-widest">FEATURED PROJECTS</h1>
+                    <p className="text-xs mt-2 tracking-[0.3em]">━━━━━━━━━━━━━━━━━</p>
+                </div>
+                <div>
+                    <button onClick={handlePrev} className="bg-gray-900 text-brown px-3 py-2 font-bold">prev</button>
+                </div>
             </div>
 
             <div className="px-8 max-w-full">
