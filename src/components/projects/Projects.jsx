@@ -6,60 +6,62 @@ const Projects = ( {projectsPromise} ) => {
      const projects = projectsData.filter(repo => repo.description && repo.description.trim() !== "");
     // console.log(projects);
    return (
-        <div className="w-full bg-slate-900 text-white px-10 py-12">
-            <div className="mb-8">
-                <h1 className="text-3xl font-bold">
-                    Featured Projects
-                </h1>
-                <p className="text-gray-400 mt-2">
-                    Selected work from my GitHub repositories
-                </p>
+        <div className="w-full bg-[#1a1a1a] min-h-full">
+            <div className="bg-black text-[#E2D288] py-4 px-8 mb-8">
+                <h1 className="text-4xl font-black tracking-widest">FEATURED PROJECTS</h1>
+                <p className="text-xs mt-2 tracking-[0.3em]">━━━━━━━━━━━━━━━━━</p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
-                {projects.map(project => (
-                    <div
-                        key={project.id}
-                        className="bg-[#1e293b] border border-slate-700 rounded-xl p-5 hover:scale-[1.02] transition duration-300 shadow-md"
-                    >
-                        <h2 className="text-xl font-semibold">
-                            {project.name}
-                        </h2>
-                        <p className="text-sm text-gray-300 mt-2 min-h-[40px]">
-                            {project.description ||"No description provided."}
-                        </p>
+            <div className="px-8 max-w-full">
+                <div className="grid lg:grid-cols-2 gap-8">
+                    {projects.map((project, index) => (
+                        <div
+                            key={project.id}
+                            className={`border-4 bg-[#0B0D06] p-8 shadow-lg ${index % 2 === 0 ? 'transform -rotate-1 border-[#AFACA1] shadow-[8px_8px_0px_#06b6d4]' : 'transform rotate-2 border-[#4a5759] shadow-[8px_8px_0px_#a78bfa]'}`}
+                        >    
+                            <div className="bg-[#0B0D06] text-[#E2D288] p-3 mb-4 border-2 border-[#5f0f40] inline-block">
+                                <h2 className="text-lg font-black tracking-wider">
+                                    ⟡ {project.name.toUpperCase()} ⟡
+                                </h2>
+                            </div>
+                            
+                            <p className="font-mono text-sm text-[#AFACA1] mt-4 leading-relaxed min-h-[60px]">
+                                {project.description || "No description provided."}
+                            </p>
 
-                        <div className="flex items-center justify-between mt-4 text-xs text-gray-400">
-                            <span className="px-2 py-1 bg-slate-800 rounded-md">
-                                {project.language || "N/A"}
-                            </span>
+                            <div className="flex flex-wrap gap-2 mt-5 mb-5">
+                                <span className="border-2 border-[#AFACA1] bg-[#AFACA1] px-3 py-1 font-black text-xs text-black">
+                                    {project.language || "N/A"}
+                                </span>
+                                <span className="border-2 border-[#4a5759] bg-[#4a5759] px-3 py-1 font-black text-xs text-black">
+                                    {project.created_at.split("T")[0]}
+                                </span>
+                            </div>
 
-                            <span> {project.created_at.split("T")[0]}</span>
-                        </div>
-
-                        <div className="flex gap-3 mt-5">
-                            <a
-                                href={project.html_url}
-                                target="_blank"
-                                rel="noreferrer"
-                                className="px-4 py-2 text-sm bg-slate-700 hover:bg-slate-600 rounded-lg transition"
-                            >
-                                GitHub
-                            </a>
-
-                            {project.homepage && (
+                            <div className="flex gap-3 flex-wrap">
                                 <a
-                                    href={project.homepage}
+                                    href={project.html_url}
                                     target="_blank"
                                     rel="noreferrer"
-                                    className="px-4 py-2 text-sm bg-amber-500 text-black hover:bg-amber-400 rounded-lg transition"
+                                    className="border-4 border-[#5f0f40] bg-[#5f0f40] px-4 py-2 text-sm font-black text-black hover:-translate-y-1 transition"
                                 >
-                                    Live
+                                    GitHub
                                 </a>
-                            )}
+
+                                {project.homepage && (
+                                    <a
+                                        href={project.homepage}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="border-4 border-[#4d194d] bg-[#4d194d] px-4 py-2 text-sm font-black text-black hover:-translate-y-1 transition"
+                                    >
+                                        Live Demo
+                                    </a>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
         </div>
     );
