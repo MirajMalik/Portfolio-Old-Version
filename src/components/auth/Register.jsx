@@ -1,9 +1,7 @@
 const Register = () => {
-    return (
-        <div>
-            Register Page
-        </div>
-    );
-};
+    <div>
+        hello
+    </div>
+}
 
 export default Register;

@@ -4,13 +4,11 @@ import './index.css'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from './components/home/Home';
-import About from './components/about/About';
 import App from './App';
-// import AuthLayout from './components/auth/AuthLayout';
-// import Login from './components/auth/Login';
-import Register from './components/auth/Register';
 import Projects from './components/projects/Projects';
 import ErrorPage from './components/Error/ErrorPage';
+import Contact from './components/contact/Contact';
+import Resume from './components/resume/Resume';
 
 const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
                         .then(res => res.json());
@@ -29,12 +27,12 @@ const router = createBrowserRouter([
         Component: Home 
       },
       { 
-        path: "about", 
+        path: "resume", 
         loader: async () => {                                         // the loaders are called before the route component is rendered.   
             const res =  await fetch('../about.json');
             return res.json();         
         },
-        Component: About,
+        Component: Resume,
       },
       { 
         path: "projects", 
@@ -42,7 +40,7 @@ const router = createBrowserRouter([
                     <Projects projectsPromise= {projectsPromise}/>
                  </Suspense> 
       },
-      { path: "register", Component: Register },
+      { path: "contact", Component: Contact },
     ],
   },
 

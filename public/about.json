@@ -3,14 +3,11 @@
     "name": "Tarek Abdullah Miraj",
     "title": "Aspiring Full-Stack Developer & AI Enthusiast",
     "description": "I am passionate about full-stack web development, artificial intelligence and machine learning. I enjoy building practical projects using React, Nodejs and MongoDB while continuously improving my problem-solving and research skills.",
-    "skills": [
-      "React",
-      "Nodejs",
-      "ExpressJs",
-      "Tailwind CSS",
-      "JavaScript",
-      "Python",
-      "Machine Learning"
+    "frontendSkills": [
+      "React", "Tailwind CSS", "JavaScript (ES6+)", "HTML5 / CSS3", "React Router", "Vite"
+    ],
+    "backendSkills": [
+      "Node.js", "Express.js", "MongoDB", "REST APIs", "Git & GitHub", "RESTful Architecture"
     ],
     "interests": [
       "Full Stack Web Development",
