@@ -1,42 +1,8 @@
+import { useNavigate, useLoaderData } from "react-router";
+
 const Blog = () => {
-    const blogs = [
-        {
-            id: 1,
-            title: "Understanding React Router v6.4+",
-            excerpt: "Dive deep into the new data router features in React Router, including loaders, actions, and advanced routing patterns.",
-            date: "May 15, 2026",
-            readTime: "5 min read",
-            category: "React",
-            image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop"
-        },
-        {
-            id: 2,
-            title: "Mastering Tailwind CSS",
-            excerpt: "Learn how to build modern, responsive, and beautiful user interfaces rapidly using Tailwind CSS utility classes.",
-            date: "May 10, 2026",
-            readTime: "7 min read",
-            category: "CSS",
-            image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
-        },
-        {
-            id: 3,
-            title: "The Future of Web Development",
-            excerpt: "Exploring upcoming trends in web development, from Server Components to AI-assisted coding and Edge computing.",
-            date: "May 02, 2026",
-            readTime: "6 min read",
-            category: "Web Dev",
-            image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
-        },
-        {
-            id: 4,
-            title: "Building Scalable APIs with Node.js",
-            excerpt: "Best practices and architectural patterns for creating robust backend services using Node.js and Express.",
-            date: "April 20, 2026",
-            readTime: "8 min read",
-            category: "Backend",
-            image: "https://images.unsplash.com/photo-1627398240411-a957c5e2195f?q=80&w=800&auto=format&fit=crop"
-        }
-    ];
+    const navigate = useNavigate();
+    const blogs = useLoaderData();
 
     return (
         <div className="w-full space-y-10 animate-fadeIn">
@@ -78,7 +44,10 @@ const Blog = () => {
                                 {blog.excerpt}
                             </p>
                             <div className="mt-auto">
-                                <button className="flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition duration-300 group/btn">
+                                <button 
+                                    onClick={() => navigate(`/blog/${blog.id}`)}
+                                    className="flex items-center gap-2 text-sm font-semibold text-amber-500 hover:text-amber-400 transition duration-300 group/btn"
+                                >
                                     Read Article 
                                     <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                                         <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />

@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Understanding React Router v6.4+",
+        "excerpt": "Dive deep into the new data router features in React Router, including loaders, actions, and advanced routing patterns.",
+        "content": "\nReact Router v6.4 introduced a massive paradigm shift in how we handle routing in React applications. The introduction of the data router—powered by `createBrowserRouter`—brings fetching and mutations directly into the routing layer.\n\n### The Power of Loaders\nLoaders allow you to fetch data before a route even renders. This eliminates the dreaded waterfall effect where a component renders, fetches data, and then renders again. Instead, the data is ready the moment the component mounts.\n\n### Handling Mutations with Actions\nActions are the counterpart to loaders. Whenever a user submits a form, the action associated with that route is triggered. This makes handling form submissions, API mutations, and subsequent data revalidation incredibly seamless.\n\nBy integrating data fetching directly into the router, React Router v6.4 makes building complex, data-driven applications significantly more predictable and performant.\n        ",
+        "date": "May 15, 2026",
+        "readTime": "5 min read",
+        "category": "React",
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "id": 2,
+        "title": "Mastering Tailwind CSS",
+        "excerpt": "Learn how to build modern, responsive, and beautiful user interfaces rapidly using Tailwind CSS utility classes.",
+        "content": "\nTailwind CSS has revolutionized the way developers write CSS. Instead of constantly switching between HTML and CSS files, Tailwind allows you to style your components directly within your markup using utility classes.\n\n### Rapid Prototyping\nOne of the biggest advantages of Tailwind is the speed at which you can build interfaces. You don't need to invent class names like `.card-container-inner` or worry about naming collisions. You just apply the styles you need exactly where you need them.\n\n### Highly Customizable\nWhile Tailwind provides a comprehensive default theme, it is built to be completely customizable. Through the `tailwind.config.js` file, you can define your own color palettes, typography, spacing scales, and more to perfectly match your brand's design system.\n\nEmbracing the utility-first approach might feel strange at first, but once you get used to it, you'll find it hard to go back to writing traditional CSS.\n        ",
+        "date": "May 10, 2026",
+        "readTime": "7 min read",
+        "category": "CSS",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "id": 3,
+        "title": "The Future of Web Development",
+        "excerpt": "Exploring upcoming trends in web development, from Server Components to AI-assisted coding and Edge computing.",
+        "content": "\nThe landscape of web development is evolving at a breakneck pace. As we look towards the future, several key technologies and paradigms are set to redefine how we build applications.\n\n### React Server Components\nReact Server Components (RSC) represent a fundamental shift in how we architect React apps. By rendering components on the server and sending minimal JavaScript to the client, RSCs promise significantly improved load times and enhanced SEO capabilities.\n\n### AI-Assisted Development\nThe rise of AI coding assistants is fundamentally changing the developer workflow. From intelligent code completion to automated code generation and bug detection, AI is becoming an indispensable tool that dramatically boosts productivity.\n\n### Edge Computing\nDeploying applications to the Edge—bringing compute and data closer to the user—is reducing latency to unprecedented levels. Frameworks are increasingly being designed with edge-first deployment in mind.\n\nStaying ahead of the curve requires continuous learning, but these advancements promise to make the web faster, more accessible, and more powerful than ever before.\n        ",
+        "date": "May 02, 2026",
+        "readTime": "6 min read",
+        "category": "Web Dev",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+        "id": 4,
+        "title": "Building Scalable APIs with Node.js",
+        "excerpt": "Best practices and architectural patterns for creating robust backend services using Node.js and Express.",
+        "content": "\nNode.js has become a powerhouse for building backend services. Its non-blocking, event-driven architecture makes it ideal for handling highly concurrent applications. However, building scalable APIs requires careful architectural planning.\n\n### Proper Layering\nA common mistake is putting all business logic inside route controllers. To build maintainable APIs, separate your application into distinct layers: routes, controllers, services, and data access. This separation of concerns makes testing and refactoring much easier.\n\n### Handling Asynchronous Operations\nAlways ensure you are handling Promises correctly. Using `async/await` combined with centralized error handling middleware prevents unhandled rejections from crashing your application.\n\n### Performance Optimization\nTo truly scale a Node.js API, consider implementing caching strategies using Redis, utilizing worker threads for CPU-intensive tasks, and deploying across multiple instances behind a load balancer.\n\nBy following these best practices, you can build Node.js APIs that are robust, maintainable, and capable of handling massive amounts of traffic.\n        ",
+        "date": "April 20, 2026",
+        "readTime": "8 min read",
+        "category": "Backend",
+        "image": "https://images.unsplash.com/photo-1627398240411-a957c5e2195f?q=80&w=800&auto=format&fit=crop"
+    }
+]

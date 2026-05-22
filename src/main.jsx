@@ -10,6 +10,7 @@ import ErrorPage from './components/Error/ErrorPage';
 import Contact from './components/contact/Contact';
 import Resume from './components/resume/Resume';
 import Blog from './components/blog/Blog';
+import BlogPost from './components/blog/BlogPost';
 
 const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
                         .then(res => res.json());
@@ -41,7 +42,22 @@ const router = createBrowserRouter([
                     <Projects projectsPromise= {projectsPromise}/>
                  </Suspense> 
       },
-      { path: "blog", Component: Blog },
+      { 
+        path: "blog", 
+        loader: async () => {
+            const res = await fetch('../blogs.json');
+            return res.json();
+        },
+        Component: Blog 
+      },
+      { 
+        path: "blog/:id", 
+        loader: async () => {
+            const res = await fetch('../blogs.json');
+            return res.json();
+        },
+        Component: BlogPost 
+      },
       { path: "contact", Component: Contact },
     ],
   },
