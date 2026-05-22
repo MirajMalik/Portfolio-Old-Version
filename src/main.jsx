@@ -9,6 +9,7 @@ import Projects from './components/projects/Projects';
 import ErrorPage from './components/Error/ErrorPage';
 import Contact from './components/contact/Contact';
 import Resume from './components/resume/Resume';
+import Blog from './components/blog/Blog';
 
 const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
                         .then(res => res.json());
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
                     <Projects projectsPromise= {projectsPromise}/>
                  </Suspense> 
       },
+      { path: "blog", Component: Blog },
       { path: "contact", Component: Contact },
     ],
   },

@@ -126,6 +126,22 @@ const Header = () => {
                 </NavLink>
 
                 <NavLink 
+                    to="/blog" 
+                    className={({ isActive }) =>
+                        `flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border ${
+                            isActive 
+                                ? "bg-amber-500/10 border-amber-500/20 text-amber-400 shadow-sm" 
+                                : "bg-transparent border-transparent text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/30"
+                        }`
+                    }
+                >
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9.5a2.5 2.5 0 00-2.5-2.5H15" />
+                    </svg>
+                    <span>Blog</span>
+                </NavLink>
+
+                <NavLink 
                     to="/contact" 
                     className={({ isActive }) =>
                         `flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-sm transition-all duration-300 border ${

@@ -36,6 +36,13 @@ const Home = () => {
                     >
                         View Resume
                     </button>
+
+                    <button 
+                        onClick={() => navigate("/blog")}
+                        className="px-5 py-2.5 text-sm font-semibold bg-[#1a1a1c] border border-zinc-800 hover:border-zinc-700 text-zinc-300 rounded-xl transition duration-300 active:scale-[0.98]"
+                    >
+                        Read Blog
+                    </button>
                     
                     <button 
                         onClick={() => navigate("/contact")}
