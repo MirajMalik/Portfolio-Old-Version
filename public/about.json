@@ -4,7 +4,7 @@
     "title": "Aspiring Full-Stack Developer & AI Enthusiast",
     "description": "I am passionate about full-stack web development, artificial intelligence and machine learning. I enjoy building practical projects using React, Nodejs and MongoDB while continuously improving my problem-solving and research skills.",
     "frontendSkills": [
-      "React", "Tailwind CSS", "JavaScript (ES6+)", "HTML5 / CSS3", "React Router", "Vite"
+      "Next.js", "React", "Tailwind CSS", "JavaScript (ES6+)", "HTML5 / CSS3", "React Router", "Vite"
     ],
     "backendSkills": [
       "Node.js", "Express.js", "MongoDB", "REST APIs", "Git & GitHub", "RESTful Architecture"
@@ -24,7 +24,7 @@
       "Master full-stack development"
     ],
     "educationStatus": "Graduate",
-    "experienceLevel": "Beginner",
+    "experienceLevel": "Entry-Level",
     "location": "Uttara, Dhaka, Bangladesh"
   }
 }

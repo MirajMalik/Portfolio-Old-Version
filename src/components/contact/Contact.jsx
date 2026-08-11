@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 const Contact = () => {
     const navigate = useNavigate();
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -15,10 +16,40 @@ const Contact = () => {
         navigate(-1);
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
-        setFormData({ name: "", email: "", subject: "", message: "" });
+        setIsSubmitting(true);
+        
+        // Add your Web3Forms Access Key here
+        const object = {
+            ...formData,
+            access_key: "bc2d831e-acb0-45c7-9d97-c077ddf395e1"
+        };
+        const json = JSON.stringify(object);
+
+        try {
+            const res = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: json
+            });
+            const resData = await res.json();
+
+            if (resData.success) {
+                setSubmitted(true);
+                setFormData({ name: "", email: "", subject: "", message: "" });
+            } else {
+                alert("Something went wrong. Please try again later.");
+            }
+        } catch (error) {
+            console.error(error);
+            alert("Something went wrong. Please try again later.");
+        } finally {
+            setIsSubmitting(false);
+        }
     }
 
     const handleChange = (e) => {
@@ -164,9 +195,10 @@ const Contact = () => {
                             <div className="pt-2">
                                 <button
                                     type="submit"
-                                    className="w-full sm:w-auto px-6 py-2.5 text-xs font-bold bg-amber-500 hover:bg-amber-600 text-[#0c0c0e] rounded-xl transition duration-300 shadow-md shadow-amber-500/10 active:scale-[0.98]"
+                                    disabled={isSubmitting}
+                                    className="w-full sm:w-auto px-6 py-2.5 text-xs font-bold bg-amber-500 hover:bg-amber-600 disabled:opacity-70 disabled:cursor-not-allowed text-[#0c0c0e] rounded-xl transition duration-300 shadow-md shadow-amber-500/10 active:scale-[0.98]"
                                 >
-                                    Send Message
+                                    {isSubmitting ? "Sending..." : "Send Message"}
                                 </button>
                             </div>
                         </form>

@@ -19,7 +19,7 @@ const Resume = () => {
                 
                 <div className="flex items-center gap-3">
                     <a 
-                        href="../../../files/Tarek Abdullah Miraj Resume U3.pdf" 
+                        href="../../../files/Tarek Abdullah Miraj_CV_Aug.pdf" 
                         download="Tarek_Abdullah_Miraj_Resume.pdf"
                         className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-[#0c0c0e] rounded-lg transition duration-300 shadow-lg shadow-amber-500/10 active:scale-[0.98]"
                     >
@@ -82,7 +82,7 @@ const Resume = () => {
                             {data?.about?.description || "Greetings. I am a passionate full-stack web developer with an obsessive dedication to creating functional yet visually striking digital experiences. My journey spans modern technologies and a deep commitment to writing code that endures."}
                         </p>
                         <p>
-                            I build with React, Node.js, Express, and MongoDB. Clean code is not just a preference—it is a philosophy. I believe the web should be beautiful, accessible, fast, and uncompromisingly intuitive.
+                            I build with Next.js, React, Node.js, Express, and MongoDB. Clean code is not just a preference—it is a philosophy. I believe the web should be beautiful, accessible, fast, and uncompromisingly intuitive.
                         </p>
                     </div>
                 </div>

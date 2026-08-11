@@ -68,7 +68,7 @@ const Home = () => {
                         <div className="space-y-1.5">
                             <h4 className="font-bold text-zinc-100 group-hover:text-amber-400 transition duration-300">Frontend Development</h4>
                             <p className="text-xs text-zinc-400 leading-relaxed">
-                                Crafting beautiful, responsive and performance-driven web interfaces using React, Tailwind CSS and HTML5/CSS3.
+                                Crafting beautiful, responsive and performance-driven web interfaces using Next.js, React, Tailwind CSS and HTML5/CSS3.
                             </p>
                         </div>
                     </div>
@@ -104,7 +104,7 @@ const Home = () => {
                         <span className="text-[10px] uppercase font-bold text-amber-500">2022 - 2026</span>
                         <h4 className="text-sm font-bold text-zinc-200">Southeast University</h4>
                         <p className="text-xs text-zinc-400">Bachelor of Science in Computer Science & Engineering</p>
-                        <p className="text-xs font-semibold text-zinc-300 mt-1">CGPA: 3.83</p>
+                        <p className="text-xs font-semibold text-zinc-300 mt-1">CGPA: 3.84</p>
                     </div>
                 </div>
 
