@@ -1,4 +1,4 @@
-import { StrictMode, Suspense } from 'react'
+import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter } from "react-router";
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
       { 
         index: true, 
          loader: async () => {                                         // the loaders are called before the route component is rendered.   
-            const res =  await fetch('../about.json');
+            const res =  await fetch(`${import.meta.env.BASE_URL}about.json`);
             return res.json();         
         },
         Component: Home 
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       { 
         path: "resume", 
         loader: async () => {                                         // the loaders are called before the route component is rendered.   
-            const res =  await fetch('../about.json');
+            const res =  await fetch(`${import.meta.env.BASE_URL}about.json`);
             return res.json();         
         },
         Component: Resume,
@@ -42,7 +42,7 @@ const router = createBrowserRouter([
       { 
         path: "blog", 
         loader: async () => {
-            const res = await fetch('../blogs.json');
+            const res = await fetch(`${import.meta.env.BASE_URL}blogs.json`);
             return res.json();
         },
         Component: Blog 
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       { 
         path: "blog/:id", 
         loader: async () => {
-            const res = await fetch('../blogs.json');
+            const res = await fetch(`${import.meta.env.BASE_URL}blogs.json`);
             return res.json();
         },
         Component: BlogPost 
@@ -61,7 +61,11 @@ const router = createBrowserRouter([
 
   { path: "*", Component: ErrorPage },
 
-]);
+],
+  {
+     basename: '/Miraj_Portfolio',
+  }
+);
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
