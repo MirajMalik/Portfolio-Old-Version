@@ -3,13 +3,27 @@ import { useNavigate, useLoaderData } from "react-router";
 const Blog = () => {
     const navigate = useNavigate();
     const blogs = useLoaderData();
+     const handlePrev = () => {
+        navigate(-1);
+    }
 
     return (
         <div className="w-full space-y-10 animate-fadeIn">
             <div>
-                <h2 className="text-3xl font-bold text-zinc-100 tracking-wide">
-                    Articles & Insights
-                </h2>
+                <div className="flex justify-between items-center flex-wrap gap-4">
+                    <h2 className="text-3xl font-bold text-zinc-100 tracking-wide">
+                         Articles & Insights
+                    </h2>
+                <button 
+                        onClick={handlePrev}
+                        className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold bg-[#1a1a1c] border border-zinc-800 hover:border-zinc-700 text-zinc-400 hover:text-zinc-200 rounded-lg transition duration-200 active:scale-[0.98]"
+                    >
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.5">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                        </svg>
+                        Back
+                </button>
+                </div>
                 <div className="w-12 h-1 bg-amber-500 rounded-full mt-2.5"></div>
                 <p className="text-zinc-400 mt-4 text-sm max-w-2xl leading-relaxed">
                     Welcome to my digital garden. Here I share my thoughts, learnings and experiences about software development, design and technology.

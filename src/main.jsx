@@ -12,8 +12,7 @@ import Resume from './components/resume/Resume';
 import Blog from './components/blog/Blog';
 import BlogPost from './components/blog/BlogPost';
 
-const projectsPromise = fetch("https://api.github.com/users/MirajMalik/repos")
-                        .then(res => res.json());
+
 
 const router = createBrowserRouter([
   {
@@ -38,9 +37,7 @@ const router = createBrowserRouter([
       },
       { 
         path: "projects", 
-        element: <Suspense fallback={ <span className='text-white flex justify-center items-center'>Loading....</span> }>
-                    <Projects projectsPromise= {projectsPromise}/>
-                 </Suspense> 
+        Component: Projects
       },
       { 
         path: "blog", 
