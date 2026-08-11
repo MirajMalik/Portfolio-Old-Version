@@ -7,7 +7,7 @@ const Header = () => {
                 <div className="relative group mb-4">
                     <div className="absolute inset-0 bg-gradient-to-tr from-amber-500 to-yellow-400 rounded-2xl blur-md opacity-25 group-hover:opacity-40 transition duration-500"></div>
                     <img 
-                        src="../../../images/DU_Gem_Miraj.png" 
+                        src={`${import.meta.env.BASE_URL}images/miraj_formal.png`} 
                         alt="Tarek Abdullah Miraj" 
                         className="relative w-28 h-28 lg:w-32 lg:h-32 rounded-2xl object-cover border border-zinc-700/50 shadow-md group-hover:scale-[1.02] transition duration-500" 
                         onError={(e) => {

@@ -19,7 +19,7 @@ const Resume = () => {
                 
                 <div className="flex items-center gap-3">
                     <a 
-                        href="../../../files/Tarek Abdullah Miraj_CV_Aug.pdf" 
+                        href={`${import.meta.env.BASE_URL}/files/Tarek Abdullah Miraj_CV_Aug.pdf`} 
                         download="Tarek_Abdullah_Miraj_Resume.pdf"
                         className="flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-amber-500 hover:bg-amber-600 text-[#0c0c0e] rounded-lg transition duration-300 shadow-lg shadow-amber-500/10 active:scale-[0.98]"
                     >

@@ -37,9 +37,15 @@ const Projects = () => {
                             {/* Image Container */}
                             <div className="h-48 overflow-hidden relative border-b border-zinc-800/60 flex-shrink-0">
                                 <div className="absolute inset-0 bg-amber-500/10 opacity-0 group-hover:opacity-100 transition duration-300 z-10"></div>
-                                <img 
-                                    src={fp.image} 
+                                {/* <img 
+                                    src={`${import.meta.env.BASE_URL}${fp.image.replace(/^\//, '')}`}
                                     alt={fp.title} 
+                                    className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700"
+                                /> */}
+                                <img 
+                                    src={`${import.meta.env.BASE_URL}${fp.image.replace(/^\//, '')}`}
+                                    alt={fp.title}
+                                    onError={(e) => console.log("IMAGE FAILED:", e.currentTarget.src)}
                                     className="w-full h-full object-cover object-center group-hover:scale-105 transition duration-700"
                                 />
                             </div>
