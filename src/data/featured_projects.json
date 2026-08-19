@@ -2,7 +2,7 @@
   {
   "id": "fp_01",
   "title": "MedTrack",
-  "image": "/images/featured_project_1.png",
+  "image": "/images/medtrack.png",
   "description": "A healthcare tracking platform built with Next.js and MongoDB to manage and track medication schedules and symptoms efficiently.",
   "techStack": ["Next.js", "JavaScript", "MongoDB", "CSS", "PostCSS"],
   "features": [
@@ -15,6 +15,20 @@
   },
   {
   "id": "fp_02",
+  "title": "BoiKini",
+  "image": "/images/Boikini.png",
+  "description": "A modern book management application and personal reading companion that enables book enthusiasts to explore collections, manage reading lists and wishlists, and track reading goals with persistent local storage.",
+  "techStack": ["React 18", "Tailwind CSS", "React Router", "React Tabs", "Vite"],
+  "features": [
+    "Smart sorting by page count and book ratings",
+    "Read list and wishlist tracking with LocalStorage persistence",
+    "Responsive design with interactive book details and custom routing"
+  ],
+  "liveLink": "https://melted-songs.surge.sh",
+  "githubLink": "https://github.com/MirajMalik/BoiKini-Shop"
+  },
+  {
+  "id": "fp_03",
   "title": "Bloggy",
   "image": "/images/bloggy.webp",
   "description": "A full-stack blogging platform that lets users create accounts, publish and edit blog posts, engage with content via likes and comments, and customize user profiles with avatar uploads.",
@@ -28,7 +42,7 @@
   "githubLink": "https://github.com/MirajMalik/Bloggy"
   },
   {
-  "id": "fp_03",
+  "id": "fp_04",
   "title": "EbUy",
   "image": "/images/Ebuy.avif",
   "description": "A full-stack MERN e-commerce platform featuring secure user authentication, a searchable product catalog, and interactive shopping cart management.",
@@ -40,19 +54,5 @@
   ],
   "liveLink": "https://eb-uy.vercel.app",
   "githubLink": "https://github.com/MirajMalik/EbUy"
-  },
-  {
-  "id": "fp_04",
-  "title": "BoiKini",
-  "image": "/images/Boikini.png",
-  "description": "A modern book management application and personal reading companion that enables book enthusiasts to explore collections, manage reading lists and wishlists, and track reading goals with persistent local storage.",
-  "techStack": ["React 18", "Tailwind CSS", "React Router", "React Tabs", "Vite"],
-  "features": [
-    "Smart sorting by page count and book ratings",
-    "Read list and wishlist tracking with LocalStorage persistence",
-    "Responsive design with interactive book details and custom routing"
-  ],
-  "liveLink": "https://melted-songs.surge.sh",
-  "githubLink": "https://github.com/MirajMalik/BoiKini-Shop"
-}
+  }
 ]
