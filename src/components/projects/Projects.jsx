@@ -66,8 +66,8 @@ const Projects = () => {
                                         </span>
                                     ))}
                                 </div>
-
-                                {/* Key Features - Optional for compact layout, or limit to 2 */}
+                                
+                                {/* Features */}
                                 <ul className="space-y-1 text-[11px] text-zinc-400">
                                     {fp.features.slice(0, 2).map((feature, idx) => (
                                         <li key={idx} className="flex items-start gap-1.5">
